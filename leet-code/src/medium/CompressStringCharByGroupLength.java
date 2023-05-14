@@ -13,22 +13,30 @@ public class CompressStringCharByGroupLength {
     }
 
     int compress(char[] chars) {
-        int i = 0, res = 0;
+        int charIndex = 0;
+        int newIndex = 0;
+        int charLength = chars.length;
 
-        while (i < chars.length) {
-            int groupLength = 1;
-            while (i + groupLength < chars.length && chars[i + groupLength] == chars[i]) {
-                groupLength++;
+        while (charIndex < charLength) {
+
+            int groupLen = 1; // default length of each group
+
+            // when character of current index & next index is equal
+            while (charIndex + groupLen < charLength && chars[charIndex] == chars[charIndex + groupLen]) {
+                groupLen++;
             }
-            chars[res++] = chars[i];
-            if (groupLength > 1) {
-                for (char c : Integer.toString(groupLength).toCharArray()) {
-                    chars[res++] = c;
+
+            chars[newIndex++] = chars[charIndex];
+
+            if (groupLen > 1) {
+                for (char c : Integer.toString(groupLen).toCharArray()) {
+                    chars[newIndex++] = c;
                 }
             }
-            i += groupLength;
+
+            charIndex = charIndex + groupLen;
         }
 
-        return res;
+        return newIndex;
     }
 }

@@ -19,7 +19,7 @@ public class CompressStringCharByGroupLength {
 
         while (charIndex < charLength) {
 
-            int groupLen = 1; // default length
+            int groupLen = 1; // default length of each group
 
             // when character of current index & next index is equal
             while (charIndex + groupLen < charLength && chars[charIndex] == chars[charIndex + groupLen]) {

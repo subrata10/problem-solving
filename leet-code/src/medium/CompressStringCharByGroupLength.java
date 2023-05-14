@@ -1,5 +1,8 @@
 package medium;
 
+/**
+ * https://leetcode.com/problems/string-compression/?envType=study-plan-v2&id=leetcode-75
+ */
 public class CompressStringCharByGroupLength {
 
     public static void main(String[] args) {

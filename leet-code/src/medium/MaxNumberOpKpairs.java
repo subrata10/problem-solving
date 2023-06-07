@@ -27,7 +27,7 @@ public class MaxNumberOpKpairs {
             int sum = nums[start] + nums[end];
 
             if (sum == k) {
-                System.out.println("(" + nums[start] + "," + nums[end] + ")");
+                System.out.println("Pair: (" + nums[start] + "," + nums[end] + ")");
                 maxOp++;
                 start++;
                 end--;

@@ -10,7 +10,6 @@ public class RemoveStars {
 
         RemoveStars removeStars = new RemoveStars();
         System.out.println(removeStars.removeStars(s));
-        ;
 
     }
 

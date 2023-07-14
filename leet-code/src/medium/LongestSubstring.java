@@ -11,7 +11,7 @@ public class LongestSubstring {
     public static void main(String[] args) {
         String[] testCases = {"abcabcbb", "bbbbbb", "pwkpwkef"};
         LongestSubstring obj = new LongestSubstring();
-//        System.out.println(obj.lengthOfLongestSubstring(s));
+
         for (String testCase : testCases) {
             System.out.println(testCase+ ": " + obj.optimalSolution(testCase));
         }
@@ -20,14 +20,18 @@ public class LongestSubstring {
     public int optimalSolution(String s) {
         int maxLength = 0;
 
-        for(int right=0, left=0; right <s.length(); right++) {
-            int firstOccurrence = s.indexOf(s.charAt(right), left);
+        for(int rightIndex=0, leftIndex=0; rightIndex <s.length(); rightIndex++) {
+            char character = s.charAt(rightIndex);
 
-            if (firstOccurrence != right) {
-                left = firstOccurrence + 1;
+            // Find the first occurrence location for given character from left side index
+            int firstOccurrenceIndex = s.indexOf(character, leftIndex);
+
+            // present index value is not equal to the index of first occurrence of present character
+            if (firstOccurrenceIndex != rightIndex) {
+                leftIndex = firstOccurrenceIndex + 1;
             }
 
-            maxLength = Math.max(maxLength, right - left + 1);
+            maxLength = Math.max(maxLength, rightIndex - leftIndex + 1);
         }
 
         return maxLength;

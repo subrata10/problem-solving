@@ -3,7 +3,7 @@ package easy;
 import java.util.Scanner;
 
 /**
- * https://www.codechef.com/problems/SLOWSOLN?tab=statement
+ * <a href="https://www.codechef.com/problems/SLOWSOLN?tab=statement">Problem Description</a>
  */
 public class SlowSolution {
 

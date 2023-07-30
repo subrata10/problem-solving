@@ -1,7 +1,12 @@
 package medium;
 
 /**
- * https://leetcode.com/problems/string-compression/?envType=study-plan-v2&id=leetcode-75
+ * <a href="https://leetcode.com/problems/string-compression/?envType=study-plan-v2&id=leetcode-75" />
+ * <p>
+ * Given an array of characters <strong><i>chars</i></strong>, compress it using the following algorithm:
+ * Begin with an empty string <strong>s</strong>. For each group of consecutive repeating characters in 'chars':
+ *  <ul> If the groups' length is 1, append the character to s </ul>
+ *  <ul> Otherwise, append the character followed by the group's length </ul>
  */
 public class CompressStringCharByGroupLength {
 
@@ -9,7 +14,10 @@ public class CompressStringCharByGroupLength {
 
         char[] chars = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
         CompressStringCharByGroupLength byGroupLength = new CompressStringCharByGroupLength();
-        System.out.println(byGroupLength.compress(chars));
+
+        int result = byGroupLength.compress(chars);
+        System.out.println(result); // Output: 4 As first 4 character will be ["a", "b", "1", "2"]
+
     }
 
     int compress(char[] chars) {

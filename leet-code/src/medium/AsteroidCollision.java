@@ -15,8 +15,14 @@ public class AsteroidCollision {
 
     public int[] asteroidCollision(int[] asteroids) {
         int top = -1;
+
         for (int x : asteroids) {
+
             boolean stillAlive = true;
+
+
+            // if still alive is true AND each asteroid value is less than 0 AND top index
+            // value is greater than equal to 0 AND asteroid value is greater than 0
 
             while (stillAlive && x < 0 && top >= 0 && asteroids[top] > 0) {
 

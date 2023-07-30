@@ -25,9 +25,12 @@ public class LongestPalindromicSubString {
     }
 
     public void findPalindromeLength(char[] arr, int start, int end) {
+
         while(start >= 0 && end < arr.length && arr[start] == arr[end]) {
-            start--; end ++;
+            start--;
+            end ++;
         }
+
         if (maxLength < (end - start - 1)) {
             maxLength = end - start - 1;
             low = start + 1;

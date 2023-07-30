@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Problem Description:
- * https://leetcode.com/problems/count-good-meals/description/
+ * <a href="https://leetcode.com/problems/count-good-meals/description/"/>
  */
 public class GoodMealCount {
 
@@ -22,7 +22,7 @@ public class GoodMealCount {
         Map<Integer, Integer> hashMap = new HashMap<>();
         long result = 0;
 
-        for (int number:deliciousness) { // outer loop
+        for (int number : deliciousness) { // outer loop
 
             int power = 1;
 

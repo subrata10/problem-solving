@@ -1,6 +1,7 @@
 package medium;
 
 /**
+ * <a href="https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element">Problem link</a><br>
  * Given a binary array nums, you should delete one element from it.
  * <p>
  * Return the size of the longest non-empty subarray containing only 1's in the resulting array.
@@ -9,7 +10,7 @@ package medium;
 public class LongestSubArrayOfOnes {
 
     public static void main(String[] args) {
-        int[] numbers = {0, 0, 0};
+        int[] numbers = {0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1};
         // i/p -> {0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1};
         LongestSubArrayOfOnes subArrayOfOnes = new LongestSubArrayOfOnes();
         System.out.println("Max of one: " + subArrayOfOnes.longestSubarray(numbers));

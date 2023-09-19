@@ -7,7 +7,7 @@ package alg.slidingwindow;
 public class MaxSumKConElements {
 
     public static void main(String[] args) {
-        int array[] = {1, 4, 2, 10, 2, 3, 1, 0, 20};
+        int[] array = {1, 4, 2, 10, 2, 3, 1, 0, 20};
         int k = 4;
 
         MaxSumKConElements elements = new MaxSumKConElements();
@@ -24,8 +24,8 @@ public class MaxSumKConElements {
         int maxSum = windowSum;
 
         for (int i = windowSize; i < l; i++) {
-            // first element from the start will discard from previous window sum
-            // next element of each window will add to current window sum
+            // first element from the start will discard from previous window sum i.e (i-windowSize)
+            // next element of each window will add to current window sum i.e. i
             windowSum = windowSum + arr[i] - arr[i - windowSize];
             maxSum = Math.max(windowSum, maxSum);
         }
